@@ -275,7 +275,7 @@ html, body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: var(--color-text);
+	color:#fa9702;
 	background-image: url(../assets/img/logo_inzufrut.jpg);
 }
 .container-login{
@@ -285,7 +285,7 @@ html, body{
 	height: auto;
 	margin: 0;
 	padding: 20px;
-	background-color: rgba(255,255,255,.7);
+	background-color: rgba(234, 228, 228, 0.918);
 	border-radius: 5px;
 }
 /*=============Estilos barra superior*/
@@ -870,6 +870,18 @@ html, body{
 	text-align: left;
     
 }
+.stcuadro{
+	border-radius: 12px;
+	width: 920px;
+	height: 10px;
+	border-color: #f9c063;
+	border-style: solid;
+}
+.stcuadr{
+	border-radius: 12px;
+	border-color: #f9c063;
+	border-style: solid;
+}
 .Lista{
     border-radius: 12px;
     border-color: #fa9702;
@@ -908,11 +920,17 @@ html, body{
     padding: 30px;
     
   }
-button{
+.btbusca{
     border-style: solid;
     border-radius: 12px;
     background-color: rgb(254, 252, 251);
     border-color: rgb(255, 179, 0);
+	
+}
+.btbusca:hover{
+	background-color: rgb(251, 213, 155);
+    color: black;
+    text-decoration:solid;
 }
 h2{
 	font-size: 30px;
@@ -922,16 +940,13 @@ h2{
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
-    border-radius: 12px;
-	border-style:solid;
 	position: relative; /* Necesario para que el recorte funcione */
-	width: 920px;
-	height: 10px;
+	
 
   }
 
-  form input[type="submit"]:hover {
-    background-color: #f1f0ee;
+ .topar{
+    background-color: #f2a50b;
     color: #0d0d0d;
     border: none;
     border-color: #fa9702;
@@ -939,9 +954,13 @@ h2{
     border-style: solid;
     padding: 0.5rem 1rem;
     cursor: pointer;
-	background-color: rgb(254, 213, 63);
+	background-color: rgb(240, 237, 229);
 	
-	
+  }
+  .topar:hover{
+	background-color: rgb(251, 213, 155);
+    color: black;
+    text-decoration:solid;
   }
 
   table {
@@ -961,14 +980,28 @@ h2{
     background-color: #f2bb67;
   }
 
-  .btn-editar, .btn-eliminar {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 0.2rem 0.5rem;
-    cursor: pointer;
+  .b3tn-eliminar {
+    border-style: solid;
+    border-radius: 12px;
+    background-color: rgb(254, 252, 251);
+    border-color: rgb(255, 179, 0);
   }
 
-  .btn-editar {
-    margin-right: 0.5rem;
+  .b3tn-editar{
+    border-style: solid;
+    border-radius: 12px;
+    background-color: rgb(254, 252, 251);
+    border-color: rgb(255, 179, 0);
+  }
+  .b3tn-eliminar:hover{
+	background-color: rgb(251, 213, 155);
+    color: black;
+    text-decoration:solid;
+	border-radius: 12px;
+  }
+  .b3tn-editar:hover {
+	border-radius: 12px;
+	background-color: rgb(251, 213, 155);
+    color: black;
+    text-decoration:solid;
   }
