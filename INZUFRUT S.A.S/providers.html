@@ -228,17 +228,17 @@
 				  </select>
 				  
 				  <label for="numero">Numero Identificacion:</label>
-				  <input type="text" id="numero" name="numero" placeholder="107823665 " required><br><br>
+				  <input class="stcuadro" type="text" id="numero" name="numero" placeholder="107823665 " required><br><br>
 				  <label for="nombre">Nombre:</label>
-				  <input type="text" id="nombre" name="nombre" placeholder="Proveedor " required><br><br>
+				  <input class="stcuadro" type="text" id="nombre" name="nombre" placeholder="Proveedor " required><br><br>
 				  
 				  <label for="correo">Correo Electrónico:</label>
-				  <input type="email" id="correo" name="correo" placeholder="proveedor@example.com" required><br><br>
+				  <input class="stcuadro" type="email" id="correo" name="correo" placeholder="proveedor@example.com" required><br><br>
 				  
 				  <label for="telefono">Teléfono:</label>
-				  <input type="text" id="telefono" name="telefono" placeholder="1234567890" required><br><br>
+				  <input class="stcuadro" type="text" id="telefono" name="telefono" placeholder="1234567890" required><br><br>
 				  
-				  <input type="submit" value="Agregar Proveedor">
+				  <input class="topar" type="submit" value="Agregar Proveedor">
 				</form>
 			  </main>
 			  
@@ -247,8 +247,8 @@
 			  
 				<div class="busqueda">
 				  <label for="busqueda">Buscar proveedores:</label>
-				  <input type="text" id="busqueda" name="busqueda">
-				  <button id="btnBusqueda">Buscar</button>
+				  <input class="stcuadr" type="text" id="busqueda" name="busqueda">
+				  <button class="btbusca" id="btnBusqueda">Buscar</button>
 				</div>
 			  
 				<table id="proveedoresTable">
@@ -346,8 +346,8 @@
 					<td>${proveedor.correo}</td>
 					<td>${proveedor.telefono}</td>
 					<td>
-					  <button class="btn-editar">Editar</button>
-					  <button class="btn-eliminar">Eliminar</button>
+					  <button class="b3tn-editar">Editar</button>
+					  <button class="b3tn-eliminar">Eliminar</button>
 					</td>
 				  `;
 			  
@@ -435,8 +435,7 @@
 				  return regexCorreo.test(correo);
 				}
 			  </script>
-	</section>
-		  
+	</section>		  
     </section>
 
 </body>
