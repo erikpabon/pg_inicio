@@ -352,15 +352,15 @@
 				  `;
 			  
 				  proveedoresList.appendChild(row);
+					
+			  		const b3tnEditar = row.querySelector(".b3tn-editar");
+				  	const b3tnEliminar = row.querySelector(".b3tn-eliminar");
 			  
-				  const btnEditar = row.querySelector(".btn-editar");
-				  const btnEliminar = row.querySelector(".btn-eliminar");
-			  
-				  btnEditar.addEventListener("click", function() {
+				  b3tnEditar.addEventListener("click", function() {
 					editarProveedor(proveedor, row);
 				  });
 			  
-				  btnEliminar.addEventListener("click", function() {
+				  b3tnEliminar.addEventListener("click", function() {
 					eliminarProveedor(proveedor, row);
 				  });
 				}
