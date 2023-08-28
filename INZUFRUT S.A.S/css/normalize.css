@@ -293,7 +293,42 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button; /* 2 */
   cursor: pointer; /* 3 */
+}button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+  text-align: 20px;
+  border-radius: 12px;
+  color: #000000;
+  padding: 10px;
 }
+.egar:hover{
+  background-color: rgb(251, 213, 155);
+  color: black;
+  text-decoration:solid;
+border-radius: 12px;
+}
+.centrado{
+  background-color: #faf9f6;
+  color: #0a0a0a;
+  border-radius: 12px;
+  border-color: #fa9702;
+  border-style: solid;
+  text-align: center;
+  padding: 1rem;
+}
+.agregarinv{
+  background-color: #faf9f6;
+  color: #0a0a0a;
+  border-radius: 12px;
+  border-color: #fa9702;
+  border-style: solid;
+  text-align: center;
+  padding: 1rem;
+}
+
 
 /**
  * Re-set default cursor for disabled elements.
