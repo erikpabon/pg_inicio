@@ -342,7 +342,7 @@ html, body{
 	display: inline-block;
 	padding: 0 7px;
 	font-size: 21px;
-	-moz-user-select: none;
+	user-select: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
 }
@@ -537,7 +537,7 @@ html, body{
 	position: absolute;
 	color: rgba(0,0,0,.3);
 	transition: all .3s ease-in-out;
-	-moz-user-select: none;
+	user-select: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
 }
@@ -815,8 +815,8 @@ html, body{
 	.timeline-c-box-icon{
 		left: 50%;
 		margin-left: -23px;
-		-webkit-transform: translateZ(0);
-		-webkit-backface-visibility: hidden;
+		transform: translateZ(0);
+		backface-visibility: hidden;
 	}
 	.timeline-c-box-content{
 		margin-left: 0;
@@ -864,10 +864,11 @@ html, body{
   }
 .Agregar{
     border-radius: 12px;
-    border-color: #fa9702;
+    border-color: #f9c063;
     border-style:solid;
-    background-color:#f6f6f4;
-	text-align: left;
+    background-color:#f6f6f4;	
+	align-content: center;
+	padding-right: 5%;
     
 }
 .stcuadro{
@@ -875,16 +876,18 @@ html, body{
 	width: 920px;
 	height: 10px;
 	border-color: #f9c063;
-	border-style: solid;
+	border-style: solid;	
 }
 .stcuadr{
 	border-radius: 12px;
+	height: 10px;
+	width: 300px;
 	border-color: #f9c063;
-	border-style: solid;
+	border-style: solid;	
 }
 .Lista{
     border-radius: 12px;
-    border-color: #fa9702;
+    border-color: #f9c063;
     border-style:solid;
     background-color:#faf9f5;
 }
@@ -896,7 +899,7 @@ html, body{
     background-color: #faf9f6;
     color: #0a0a0a;
     border-radius: 12px;
-    border-color: #fa9702;
+    border-color: #f9c063;
     border-style: solid;
     text-align: center;
     padding: 1rem;
@@ -936,7 +939,9 @@ h2{
 	font-size: 30px;
 }
   form input[type="text"],
-  form input[type="email"] {
+  form input[type="email"],
+  textarea {	
+	border-style: solid;
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -973,7 +978,7 @@ h2{
     border-style: solid;
     background-color: #fafaf8;
     padding: 0.5rem;
-    text-align: left;
+    text-align: center;
   }
 
   th {
@@ -1009,3 +1014,24 @@ h2{
   .inven{
 	background-color: #f2a50b;
   }
+/*css de RegistroProducto*/
+.addProduct{
+	border-radius: 12px;
+    border-color: #f9c063;
+	border-style: solid;
+}
+button.addProduct:hover {
+	background-color: #f9c063;
+}
+#tabla-productos th{
+	border: none;
+}
+.name{
+	border-top-left-radius: 10px; 
+	border-bottom-left-radius: 10px;
+}
+.quantity {
+	border-top-right-radius: 10px; 
+	border-bottom-right-radius: 10px; 
+  }
+  
