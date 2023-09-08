@@ -1,7 +1,3 @@
-<!-- 
-* Copyright 2018 Carlos Eduardo Alfaro Orellana
-  https://www.youtube.com/c/CarlosAlfaro007
--->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -111,7 +107,20 @@
 				<ul class="full-width list-unstyle menu-principal">					
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="categories.html" class="full-width">
+						<a href="home.php" class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-label"></i>
+							</div>
+							<div class="navLateral-body-cr">
+								INICIO
+							</div>
+						</a>
+					</li>
+			<nav class="full-width">
+				<ul class="full-width list-unstyle menu-principal">					
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<a href="categories.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-label"></i>
 							</div>
@@ -122,7 +131,7 @@
 					</li>
 					<li class="full-width divider-menu-h"></li>										
 					<li class="full-width">
-						<a href="products.html" class="full-width">
+						<a href="products.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-washing-machine"></i>
 							</div>
@@ -133,7 +142,7 @@
 					</li>					
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="inventory.html" class="full-width">
+						<a href="inventory.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-store"></i>
 							</div>
@@ -207,54 +216,49 @@
 				</nav>
 			</div>
 		</div>
-		<section class="full-width text-center" style="padding: 40px 0;">
-			<h3 class="text-center tittles">Ventanas respectivas</h3>
-			<!-- Tiles -->
-			<article class="full-width tile">
-				<div class="tile-text">
-					<span class="text-condensedLight">
-						1<br>
-						<small><a href="">Colaborador 1</a></small>
-					</span>
-				</div>
-				<i class="zmdi zmdi-account tile-icon"></i>
-			</article>
-			
-			<article class="full-width tile">
-				<div class="tile-text">
-					<span class="text-condensedLight">
-						2<br>
-						<small>Colaborador 2</small>
-					</span>
-				</div>
-				<i class="zmdi zmdi-account tile-icon"></i>
-			</article>
-			<article class="full-width tile">
-				<div class="tile-text">
-					<span class="text-condensedLight">
-						3<br>
-						<li>Inventarios</li>
-						
-					</span>
-				</div>
-				<i class="zmdi zmdi-label tile-icon"></i>
-			</article>
-			<article class="full-width tile">
-				<div class="tile-text">
-					<span class="text-condensedLight">
-						4<br>
-						<small>Productos</small>
-					</span>
-				</div>
-				<i class="zmdi zmdi-washing-machine tile-icon"></i>
-			</article>
-			<article class="full-width tile">
-				<div class="tile-text">
-					
-				</div>
-				<i class="zmdi zmdi-shopping-cart tile-icon"></i>
-			</article>
-		</section>
+		<section class="body">
+			<header>
+		<h1><img class="pabon" src="assets/img/icono.png" alt="icon"></a>Formulario de Registro</h1>
+		</header>
+		<main class="Agregar">
+        <h2>Datos de Registro</h2>
+        <form action="valid_registro.php" method="POST">
+		<label class="tovar" for="tipo_identificacion">Tipo de Identificación:</label>
+			<select id="tipo_iden" name="tipo_iden" required>
+			<option value="cedula_ciudadania">Cédula de Ciudadanía</option>
+			<option value="cedula_extranjera">Cédula Extranjera</option>
+        </select><br>
+        
+        <label for="numero_documento">Número de Documento:</label>
+        <input class="stcuadro" type="number" id="numero_documento" name="numero_documento" required><br>
+        
+        <label for="primer_nombre">Primer Nombre:</label>
+        <input class="stcuadro" type="text" id="primer_nombre" name="primer_nombre" required><br>
+        
+        <label for="segundo_nombre">Segundo Nombre:</label>
+        <input class="stcuadro" type="text" id="segundo_nombre" name="segundo_nombre"><br>
+        
+        <label for="primer_apellido">Primer Apellido:</label>
+        <input class="stcuadro" type="text" id="primer_apellido" name="primer_apellido" required><br>
+        
+        <label for="segundo_apellido">Segundo Apellido:</label>
+        <input class="stcuadro" type="text" id="segundo_apellido" name="segundo_apellido"><br>
+        
+        <label class="tovar" for="tipo_persona">Tipo de Persona:</label>
+        <select id="tipo_persona" name="tipo_persona" required>
+            <option value="gerente">Gerente</option>
+            <option value="colaborador">Colaborador</option>
+            <option value="proveedor">Proveedor</option>
+        </select><br>
+        
+        <label for="correo_electronico">Correo Electrónico:</label>
+        <input class="stcuadro" type="email" id="correo_electronico" name="correo_electronico" required><br>
+
+        <input class="topar" type="submit" value="Registrar">
+    </form>
+</main>
+    
+	</section>
 		
 	</section>
 </body>
