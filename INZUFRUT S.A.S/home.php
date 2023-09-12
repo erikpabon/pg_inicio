@@ -120,7 +120,7 @@
 						</a>
 						<ul class="full-width menu-principal sub-menu-options">
 							<li class="full-width">
-								<a href="Colaborador.html" class="full-width">
+								<a href="Colaborador.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-balance"></i>
 									</div>
@@ -130,7 +130,7 @@
 								</a>
 							</li>
 							<li class="full-width">
-								<a href="providers.html" class="full-width">
+								<a href="providers.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-truck"></i>
 									</div>
@@ -143,7 +143,7 @@
 								
 							</li>
 							<li class="full-width">
-								<a href="admin.html" class="full-width">
+								<a href="admin.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-label"></i>
 									</div>
@@ -159,7 +159,7 @@
 					
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="inventory.html" class="full-width">
+						<a href="inventory.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-store"></i>
 							</div>
@@ -170,7 +170,7 @@
 					</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="Error-500/Error-500.html">
+						<a href="Error-500/Error-500.php">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-wrench"></i>
 							</div>
@@ -230,7 +230,7 @@
 				<div class="tile-text">
 					<span class="text-condensedLight">
 						2<br>
-						<small><a href="Error/Error-404.html">Colaborador</a></small>
+						<small><a href="Error/Error-404.php">Colaborador</a></small>
 					</span>
 				</div>
 				<i class="zmdi zmdi-account tile-icon"></i>
