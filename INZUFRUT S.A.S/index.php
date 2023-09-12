@@ -27,9 +27,9 @@
 				<i class="zmdi zmdi-account-circle"></i>
 			</p>
 			<p class="text-center text-condensedLight">Ingresa con tu cuenta</p>
-			<form action="home.html">
+			<form action="home.php">
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-				    <input class="mdl-textfield__input" type="text" id="userName">
+				    <input class="mdl-textfield__input" type="texto" id="userName">
 				    <label class="mdl-textfield__label" for="userName">Nombre Usuario</label>
 				</div>
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
