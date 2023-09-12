@@ -115,7 +115,7 @@
 			<nav class="full-width">
 				<ul class="full-width list-unstyle menu-principal">
 					<li class="full-width">
-						<a href="home.html" class="full-width">
+						<a href="home.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-view-dashboard"></i>
 							</div>
@@ -126,7 +126,7 @@
 					</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="providers.html" class="full-width">
+						<a href="providers.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-washing-machine"></i>
 							</div>
@@ -137,7 +137,7 @@
 					</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="products.html" class="full-width">
+						<a href="products.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-washing-machine"></i>
 							</div>
@@ -152,7 +152,7 @@
 					</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="inventory.html" class="full-width">
+						<a href="inventory.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-store"></i>
 							</div>
@@ -261,15 +261,6 @@
 
 </html>
 
-<table class id="tablaInventario">
-	<tr>
-		<th>Producto</th>
-		<th>Cantidad</th>
-		<th>Precio Unitario</th>
-		<th>Total</th>
-		<th>Acciones</th>
-	</tr>
-</table>
 <div class="agregarinv">
 	<div>
 		<h3>Agregar nuevo producto</h3>
@@ -296,6 +287,17 @@
 		</form>
 	</div>
 </div>
+
+<table class id="tablaInventario">
+	<tr>
+		<th>Producto</th>
+		<th>Cantidad</th>
+		<th>Precio Unitario</th>
+		<th>Total</th>
+		<th>Acciones</th>
+	</tr>
+</table>
+
 
 <script>
 	const inventario = [];
@@ -352,3 +354,4 @@
 </body>
 
 </html>
+				
