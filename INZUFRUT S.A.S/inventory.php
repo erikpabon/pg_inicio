@@ -1,7 +1,3 @@
-<!-- 
-* Copyright 2018 Carlos Eduardo Alfaro Orellana
-  https://www.youtube.com/c/CarlosAlfaro007
--->
 <!DOCTYPE html>
 <html lang="es">
 
@@ -97,25 +93,17 @@
 		<div class="full-width navLateral-bg btn-menu"></div>
 		<div class="full-width navLateral-body">
 			<div class="full-width navLateral-body-logo text-center tittles">
-				<i class="zmdi zmdi-close btn-menu"></i> Inventario
+				<i class="zmdi zmdi-close btn-menu"></i> INZUFRUT
 			</div>
 			<figure class="full-width navLateral-body-tittle-menu">
 				<div>
-					<img src="https://tse2.mm.bing.net/th?id=OIP.IMdgzsLntbNlCn4vOkas1gHaE8&pid=Api&P=0&h=180"
-						alt="Avatar"
-						class="https://tse2.mm.bing.net/th?id=OIP.IMdgzsLntbNlCn4vOkas1gHaE8&pid=Api&P=0&h=180">
+					<img src="https://www.pointmeup.com/hubfs/Modulos%20POINT_05.png" alt="Avatar" class="img-responsive">
 				</div>
-				<figcaption>
-					<span>
-						LIBARDO MALAVER PARRA<br>
-						<small>GERENTE</small>
-					</span>
-				</figcaption>
 			</figure>
 			<nav class="full-width">
 				<ul class="full-width list-unstyle menu-principal">
 					<li class="full-width">
-						<a href="home.php" class="full-width">
+						<a href="colaborador.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-view-dashboard"></i>
 							</div>
@@ -209,7 +197,19 @@
 							<i class="zmdi zmdi-power"></i>
 							<div class="mdl-tooltip" for="btn-exit">Cerrar sesión</div>
 						</li>
-						<li class="text-condensedLight noLink"><small>Nombre de Unuario</small></li>
+						<script>
+        // Función para cerrar la sesión y redirigir a index.php
+        function cerrarSesion() {
+            // Realiza una petición al servidor para cerrar la sesión (puedes usar AJAX o redireccionar)
+            // En PHP, puedes usar session_destroy() para eliminar la sesión del servidor.
+            // Después, redirige al usuario a index.php.
+            window.location.href = 'index.php';
+        }
+
+        // Agrega un evento de clic al botón de "Cerrar Sesión"
+        document.getElementById('btn-exit').addEventListener('click', cerrarSesion);
+    </script>
+						<li class="text-condensedLight noLink"><small></small></li>
 						<li class="noLink">
 							<figure>
 								<img src="assets/img/avatar-male.png" alt="Perfil" class="img-responsive">
@@ -354,4 +354,5 @@
 </body>
 
 </html>
+				
 				
