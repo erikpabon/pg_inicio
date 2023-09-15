@@ -105,14 +105,14 @@ while($ejec = mysqli_fetch_array($result)){
 ?>
 
 <tr>
-<td><?php echo $ejec ['tipo_identificacion']?></td>
+<td><?php echo $ejec ['Tipo_identificacion']?></td>
 <td><?php echo $ejec ['Num_Doc']?></td>
 <td><?php echo $ejec ['primNombre']?></td>
 <td><?php echo $ejec ['segNombre']?></td>
 <td><?php echo $ejec ['primApellido']?></td>
 <td><?php echo $ejec ['segApellido']?></td>
-<td><?php echo $ejec ['correo']?></td>  
-<td><?php echo $ejec ['tipo_persona']?></td> 
+<td><?php echo $ejec ['Correo']?></td>  
+<td><?php echo $ejec ['Tipo_persona']?></td> 
 <td>
         <form action="eliminar_registro.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $ejec['Num_Doc']; ?>">
@@ -138,3 +138,4 @@ while($ejec = mysqli_fetch_array($result)){
 <a class="bt" href="colaborador.php">Regresar</a>
 </body>
 </html>
+
