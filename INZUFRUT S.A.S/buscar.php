@@ -14,8 +14,8 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo "Num_Doc: " . $row['Num_Doc'] . "<br>";
         echo "Nombre: " . $row['primNombre'] . " " . $row['segNombre'] . " " . $row['primApellido'] . " " . $row['segApellido'] . "<br>";
-        echo "Correo: " . $row['correo'] . "<br>";
-        echo "Tipo Persona: " . $row['tipo_persona'] . "<br>";
+        echo "Correo: " . $row['Correo'] . "<br>";
+        echo "Tipo Persona: " . $row['Tipo_persona'] . "<br>";
         echo "<hr>";
     }
 } else {
