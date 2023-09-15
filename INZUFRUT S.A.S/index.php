@@ -1,4 +1,3 @@
->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -27,13 +26,13 @@
 				<i class="zmdi zmdi-account-circle"></i>
 			</p>
 			<p class="text-center text-condensedLight">Ingresa con tu cuenta</p>
-			<form action="home.php">
+			<form action="login_usuario.php" method="POST">
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-				    <input class="mdl-textfield__input" type="texto" id="userName">
+				    <input class="mdl-textfield__input" name="correo" type="texto" id="correo">
 				    <label class="mdl-textfield__label" for="userName">Nombre Usuario</label>
 				</div>
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-				    <input class="mdl-textfield__input" type="password" id="pass">
+				    <input class="mdl-textfield__input" name="contrasena" type="password" id="pass">
 				    <label class="mdl-textfield__label" for="pass">Contraseña</label>
 				</div>
 				<button class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:  #ff9b04; margin: 0 auto; display: block;">
