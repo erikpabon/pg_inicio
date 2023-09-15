@@ -113,19 +113,9 @@
 			</figure>
 			<nav class="full-width">
 				<ul class="full-width list-unstyle menu-principal">
-					<li class="full-width">
-						<a href="Inicio.html" class="full-width">
-							<div class="navLateral-body-cl">
-								<i class="zmdi zmdi-view-dashboard"></i>
-							</div>
-							<div class="navLateral-body-cr">
-								INICIO
-							</div>
-						</a>
-					</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="products.html" class="full-width">
+						<a href="products.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-washing-machine"></i>
 							</div>
@@ -136,18 +126,18 @@
 					</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="ventas.html" class="full-width">
+						<a href="tabla_proveedores.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-shopping-cart"></i>
 							</div>
 							<div class="navLateral-body-cr">
-								VENTAS
+								TABLA DE REGISTROS
 							</div>
 						</a>
 					</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="inventario.html" class="full-width">
+						<a href="inventory.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-store"></i>
 							</div>
@@ -216,233 +206,59 @@
 		</div>
 		<section class="body">
 			<header>
-				<h1><img class="pabon" src="assets/img/icono.png" alt="icon"></a> REGISTRO DE PROVEEDORES</h1>
+				<h1><img class="pabon" src="assets/img/icono.png" alt="icon"></a> Orden de Pedido</h1>
+				<style>
+					.stcuado{
+						border-radius: 12px;
+						width: 800px;
+						height: 10px;
+						border-color: #f9c063;
+						border-style: solid;	
+					}
+					.stcuadr{
+						border-radius: 12px;
+						height: 10px;
+						width: 300px;
+						border-color: #f9c063;
+						border-style: solid;	
+					}
+				</style>
 			</header>
-
+			<br>
+			<br>
 			<main class="Agregar">
-				<h2>AGREGAR PROVEEDOR</h2>
+    <form action="valid_proveedor.php" method="post">
+        <label for="nombre_proveedor">Nombre del Proveedor:</label>
+        <input type="text" class="stcuado" name="nombre_proveedor" required><br><br>
 
-				<form id="proveedorForm">
-					<label class="tovar" for="tipo_identificacion">Tipo de Identificación:</label>
-					<select id="tipo_iden" name="tipo_iden" required>
-						<option value="cedula_ciudadania">Cédula de Ciudadanía</option>
-						<option value="cedula_extranjera">Cédula Extranjera</option>
-					</select><br>
+		<label class="tovar" for="tipo_identificacion">Tipo de Identificación:</label>
+			<select id="tipo_iden" name="tipo_iden" required>
+			<option value="cedula_ciudadania">Cédula de Ciudadanía</option>
+			<option value="cedula_extranjera">Cédula Extranjera</option>
+        </select><br><br>
 
-					<label for="numero">Numero Identificacion:</label>
-					<input class="stcuadro" type="text" id="numero" name="numero" placeholder="107823665 "
-						required><br><br>
-					<label for="nombre">Nombre:</label>
-					<input class="stcuadro" type="text" id="nombre" name="nombre" placeholder="Proveedor "
-						required><br><br>
+        <label for="numero_identificacion">Número de Identificación:</label>
+        <input type="text" class="stcuado" name="numero_identificacion" required><br>
 
-					<label for="correo">Correo Electrónico:</label>
-					<input class="stcuadro" type="email" id="correo" name="correo" placeholder="proveedor@example.com"
-						required><br><br>
+        <label for="direccion">Dirección:</label>
+        <input type="text" class="stcuado" name="direccion" required><br>
 
-					<label for="telefono">Teléfono:</label>
-					<input class="stcuadro" type="text" id="telefono" name="telefono" placeholder="1234567890"
-						required><br><br>
+        <label for="telefono">Teléfono:</label>
+        <input type="text" class="stcuado" name="telefono" required><br>
 
-					<input class="topar" type="submit" value="Agregar Proveedor">
-				</form>
-			</main>
+        <label for="correo">Correo:</label>
+        <input type="email" class="stcuado" name="correo" required><br>
 
-			<main class="Lista">
-				<h2>LISTA DE PROVEEDORES</h2>
+        <label for="producto">Producto:</label>
+        <input type="text" class="stcuado" name="producto" required><br>
 
-				<div class="busqueda">
-					<label for="busqueda">Buscar proveedores:</label>
-					<input class="stcuadr" type="text" id="busqueda" name="busqueda">
-					<button class="btbusca" id="btnBusqueda">Buscar</button>
-				</div>
+        <input class="topar"  type="submit" value="Enviar Pedido">
+    </form>
+				</main>
 
-				<table id="proveedoresTable">
-					<thead>
-						<tr>
-							<th>Tipo de identificacion</th>
-							<th>Numero Identificacion</th>
-							<th>Nombre</th>
-							<th>Correo Electrónico</th>
-							<th>Teléfono</th>
-							<th>Acciones</th>
-						</tr>
-					</thead>
-					<tbody id="proveedoresList">
-						<!-- Filas de proveedores se agregarán aquí -->
-					</tbody>
-				</table>
-			</main>
-
-			<script>
-				const proveedoresList = document.getElementById("proveedoresList");
-				const proveedorForm = document.getElementById("proveedorForm");
-				const tipo_idenInput = document.getElementById("tipo_iden");
-				const numeroInput = document.getElementById("numero");
-				const nombreInput = document.getElementById("nombre");
-				const correoInput = document.getElementById("correo");
-				const telefonoInput = document.getElementById("telefono");
-				const busquedaInput = document.getElementById("busqueda");
-				const btnBusqueda = document.getElementById("btnBusqueda");
-
-				// Obtener proveedores del almacenamiento local al cargar la página
-				const proveedoresGuardados = JSON.parse(localStorage.getItem("proveedores")) || [];
-				proveedoresGuardados.forEach(proveedor => {
-					agregarProveedorATabla(proveedor);
-				});
-
-				proveedorForm.addEventListener("submit", function (event) {
-					event.preventDefault();
-					const tipo_iden = tipo_idenInput.value;
-					const numero = numeroInput.value;
-					const nombre = nombreInput.value;
-					const correo = correoInput.value;
-					const telefono = telefonoInput.value;
-
-					if (validarCorreo(correo)) {
-						const proveedor = {
-							tipo_iden: tipo_iden,
-							numero: numero,
-							nombre: nombre,
-							correo: correo,
-							telefono: telefono
-						};
-
-						agregarProveedorATabla(proveedor);
-						guardarProveedor(proveedor);
-						limpiarFormulario();
-					} else {
-						alert("Por favor, ingresa una dirección de correo electrónico válida.");
-					}
-				});
-
-				btnBusqueda.addEventListener("click", function () {
-					const busquedaTexto = busquedaInput.value.toLowerCase();
-					const filas = proveedoresList.getElementsByTagName("tr");
-
-					for (let i = 0; i < filas.length; i++) {
-						const fila = filas[i];
-						const celdas = fila.getElementsByTagName("td");
-						let encontrado = false;
-
-						for (let j = 0; j < celdas.length - 1; j++) { // Ignorar la última celda de acciones
-							const celdaTexto = celdas[j].textContent.toLowerCase();
-
-							if (celdaTexto.includes(busquedaTexto)) {
-								encontrado = true;
-								break;
-							}
-						}
-
-						if (encontrado) {
-							fila.style.display = "";
-						} else {
-							fila.style.display = "none";
-						}
-					}
-				});
-
-				function agregarProveedorATabla(proveedor) {
-					const row = document.createElement("tr");
-
-					row.innerHTML = `
-				  <td>${proveedor.tipo_iden}</td>
-					<td>${proveedor.numero}</td>
-					<td>${proveedor.nombre}</td>
-					<td>${proveedor.correo}</td>
-					<td>${proveedor.telefono}</td>
-					<td>
-					  <button class="b3tn-editar">Editar</button>
-					  <button class="b3tn-eliminar">Eliminar</button>
-					</td>
-				  `;
-
-					proveedoresList.appendChild(row);
-
-					const b3tnEditar = row.querySelector(".b3tn-editar");
-					const b3tnEliminar = row.querySelector(".b3tn-eliminar");
-
-					b3tnEditar.addEventListener("click", function () {
-						editarProveedor(proveedor, row);
-					});
-
-					b3tnEliminar.addEventListener("click", function () {
-						eliminarProveedor(proveedor, row);
-					});
-				}
-
-				function guardarProveedor(proveedor) {
-					const proveedoresGuardados = JSON.parse(localStorage.getItem("proveedores")) || [];
-					proveedoresGuardados.push(proveedor);
-					localStorage.setItem("proveedores", JSON.stringify(proveedoresGuardados));
-				}
-
-				function limpiarFormulario() {
-					tipo_idenInput.value = "";
-					numeroInput.value = "";
-					nombreInput.value = "";
-					correoInput.value = "";
-					telefonoInput.value = "";
-				}
-
-				function editarProveedor(proveedor, row) {
-					const nuevoTipo_iden = prompt("Ingrese el nuevo tipo de identificacion:", proveedor.tipo_iden);
-					const nuevoNumero = prompt("Ingrese el nuevo numero de identificacion:", proveedor.numero);
-					const nuevoNombre = prompt("Ingrese el nuevo nombre:", proveedor.nombre);
-					const nuevoCorreo = prompt("Ingrese el nuevo correo:", proveedor.correo);
-					const nuevoTelefono = prompt("Ingrese el nuevo teléfono:", proveedor.telefono);
-
-					proveedor.tipo_iden = nuevoTipo_iden;
-					proveedor.numero = nuevoNumero;
-					proveedor.nombre = nuevoNombre;
-					proveedor.correo = nuevoCorreo;
-					proveedor.telefono = nuevoTelefono;
-
-					row.innerHTML = `
-				  <td>${proveedor.tipo_iden}</td>
-					<td>${proveedor.numero}</td>
-					<td>${proveedor.nombre}</td>
-					<td>${proveedor.correo}</td>
-					<td>${proveedor.telefono}</td>
-					<td>
-					  <button class="btn-editar">Editar</button>
-					  <button class="btn-eliminar">Eliminar</button>
-					</td>
-				  `;
-
-					actualizarProveedor(proveedor);
-				}
-
-				function actualizarProveedor(proveedor) {
-					const proveedoresGuardados = JSON.parse(localStorage.getItem("proveedores")) || [];
-					const index = proveedoresGuardados.findIndex(p => p.correo === proveedor.correo);
-
-					if (index !== -1) {
-						proveedoresGuardados[index] = proveedor;
-						localStorage.setItem("proveedores", JSON.stringify(proveedoresGuardados));
-					}
-				}
-
-				function eliminarProveedor(proveedor, row) {
-					if (confirm("¿Estás seguro de que deseas eliminar este proveedor?")) {
-						row.remove();
-						const proveedoresGuardados = JSON.parse(localStorage.getItem("proveedores")) || [];
-						const index = proveedoresGuardados.findIndex(p => p.correo === proveedor.correo);
-
-						if (index !== -1) {
-							proveedoresGuardados.splice(index, 1);
-							localStorage.setItem("proveedores", JSON.stringify(proveedoresGuardados));
-						}
-					}
-				}
-
-				function validarCorreo(correo) {
-					const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-					return regexCorreo.test(correo);
-				}
-			</script>
 		</section>
 	</section>
+
 
 </body>
 

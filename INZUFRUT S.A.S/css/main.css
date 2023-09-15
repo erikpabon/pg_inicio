@@ -874,7 +874,7 @@ html, body{
 .stcuadro{
 	border-radius: 12px;
 	width: 920px;
-	height: 10px;
+	height: 20px;
 	border-color: #f9c063;
 	border-style: solid;	
 }
@@ -940,6 +940,7 @@ h2{
 }
   form input[type="text"],
   form input[type="email"],
+  form input[type="number"],
   textarea {	
 	border-style: solid;
     width: 100%;
