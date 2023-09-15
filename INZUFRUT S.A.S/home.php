@@ -96,11 +96,11 @@
 			</div>
 			<figure class="full-width navLateral-body-tittle-menu">
 				<div>
-					<img src="https://tse2.mm.bing.net/th?id=OIP.IMdgzsLntbNlCn4vOkas1gHaE8&pid=Api&P=0&h=180" alt="Avatar" class="https://tse2.mm.bing.net/th?id=OIP.IMdgzsLntbNlCn4vOkas1gHaE8&pid=Api&P=0&h=180">
+				<img src="https://i.pinimg.com/236x/d0/4f/b2/d04fb256c75d5853e261d3fabc9a1164.jpg" alt="Avatar" class="img-responsive"
 				</div>
 				<figcaption>
 					<span>
-						LIBARDO MALAVER PARRA<br>
+						Erik Armando Pabon Tovar<br>
 						<small>GERENTE</small>
 					</span>
 				</figcaption>
@@ -211,12 +211,25 @@
 						</li>
 						<li class="btn-exit" id="btn-exit">
 							<i class="zmdi zmdi-power"></i>
-							<div class="mdl-tooltip" for="btn-exit">Cerrar Sesion</div>
+							<div class="mdl-tooltip" for="btn-exit"> Cerrar Sesion</div>
 						</li>
-						<li class="text-condensedLight noLink" ><small>Nombre de Usuario</small></li>
+						<script>
+        // Función para cerrar la sesión y redirigir a index.php
+        function cerrarSesion() {
+            // Realiza una petición al servidor para cerrar la sesión (puedes usar AJAX o redireccionar)
+            // En PHP, puedes usar session_destroy() para eliminar la sesión del servidor.
+            // Después, redirige al usuario a index.php.
+            window.location.href = 'index.php';
+        }
+
+        // Agrega un evento de clic al botón de "Cerrar Sesión"
+        document.getElementById('btn-exit').addEventListener('click', cerrarSesion);
+    </script>
+
+						<li class="text-condensedLight noLink" ><small>Erik Pabon</small></li>
 						<li class="noLink">
 							<figure>
-								<img src="assets/img/avatar-male.png" alt="Avatar" class="img-responsive">
+								<img src="assets/img/erikpabon1.jpg" alt="Avatar" class="img-responsive">
 							</figure>
 						</li>
 					</ul>
@@ -225,50 +238,8 @@
 		</div>
 		<section class="full-width text-center" style="padding: 40px 0;">
 			<h3 class="text-center tittles">Ventanas respectivas</h3>
-			<!-- Tiles -->
-			<article class="full-width tile">
-				<div class="tile-text">
-					<span class="text-condensedLight">
-						2<br>
-						<small><a href="Error/Error-404.php">Colaborador</a></small>
-					</span>
-				</div>
-				<i class="zmdi zmdi-account tile-icon"></i>
-			</article>
-			
-			<article class="full-width tile">
-				<div class="tile-text">
-					<span class="text-condensedLight">
-						7<br>
-						<small>Provedor</small>
-					</span>
-				</div>
-				<i class="zmdi zmdi-truck tile-icon"></i>
-			</article>
-			<article class="full-width tile">
-				<div class="tile-text">
-					<span class="text-condensedLight">
-						<br>
-						<small>Inventarios</small>
-					</span>
-				</div>
-				<i class="zmdi zmdi-label tile-icon"></i>
-			</article>
-			<article class="full-width tile">
-				<div class="tile-text">
-					<span class="text-condensedLight">
-						121<br>
-						<small>Productos</small>
-					</span>
-				</div>
-				<i class="zmdi zmdi-washing-machine tile-icon"></i>
-			</article>
-			<article class="full-width tile">
-				<div class="tile-text">
-					
-				</div>
-				<i class="zmdi zmdi-shopping-cart tile-icon"></i>
-			</article>
+
 		</section>		
 </body>
 </html>
+
