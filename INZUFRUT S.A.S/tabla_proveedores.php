@@ -116,7 +116,7 @@
             <td><?php echo $ejec ['celular']?></td>
             <td><?php echo $ejec ['producto']?></td>
             <td>
-                <form action="eliminar_registro.php" method="POST">
+                <form action="eliminar_prov.php" method="POST">
                     <input type="hidden" name="id" value="<?php echo $ejec['Num_Doc']; ?>">
                     <button class="btbusca" type="submit" class="btn-eliminar" onclick="return confirm('¿Estás seguro de que quieres eliminar este registro?')">Eliminar</button>
                 </form>

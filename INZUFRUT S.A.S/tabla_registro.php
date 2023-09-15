@@ -136,7 +136,7 @@ while($ejec = mysqli_fetch_array($result)){
 <br>
 <br>
 
-<a class="bt" href="colaborador.php">Regresar</a>
+<a class="bt" href="registro_gerencia.php">Regresar</a>
 </body>
 </html>
 

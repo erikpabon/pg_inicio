@@ -145,12 +145,12 @@
 								
 							</li>
 							<li class="full-width">
-								<a href="admin.php" class="full-width">
+								<a href="registro_gerencia.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-label"></i>
 									</div>
 									<div class="navLateral-body-cr">
-										GERENTE
+										 REGISTRO
 									</div>
 								</a>
 							</li>

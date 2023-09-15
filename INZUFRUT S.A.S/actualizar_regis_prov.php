@@ -62,24 +62,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['actualizar'])) {
 	<title>ACTUALIZAR PROVEEDORES</title>
  <style>
     /* Estilos generales */
-body {
+    body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
     margin: 0;
     padding: 0;
+    border-style: solid;
+    border-color: #fa9702;
 }
 
 .container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ff8000; /* Cambiar el fondo a naranja */
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    color: #333;
+    font-size: 30px;
 }
 
 label {
@@ -89,60 +90,92 @@ label {
 }
 
 input[type="text"], input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    font-size: 16px;
+	border-radius: 10px;
+	width: 920px;
+	height: 30px;
+	border-color: #f9c063;
+	border-style: solid;
 }
 
 button[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
+    background-color: rgb(254, 252, 251); /* Cambiar el fondo del botón a naranja */
+    color: black;
+    background-color: rgb(254, 252, 251);
+    border-color: rgb(255, 179, 0);
     padding: 10px 20px;
-    border-radius: 3px;
+    border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
+    text-align: center;
 }
 
 button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: rgb(251, 213, 155);
+    color: black;
+    text-decoration: solid;
+}
+form{
+text-align: center;
+}
+label{
+    padding-right: 690px;
+}
+header {
+    background-color: #faf9f6;
+    color: #0a0a0a;
+    border-radius: 12px;
+    border-color: #f9c063;
+    border-style: solid;
+    text-align: center;
+    padding: 1rem;
+	
+    
+  }
+.pabon{
+	width: 70px;
+	float: left;
+}
+.direc{
+    padding-right: 790px;
+}
+.produc{
+    padding-right: 790px;
+}
+.nuevo{
+padding-right: 700px;
 }
 
-/* Estilos específicos para el formulario de actualización */
-form {
-    margin-top: 20px;
-}
-
-/* Agrega estilos adicionales según tus necesidades */
 
  </style>
 </head>
 <body>
-    <h2>Actualizar Proveedor</h2>
+    <header>
+    <h2><img class="pabon" src="assets/img/icono.png" alt="icon"></a>Actualizar Proveedor</h2>
+    <br>
+    </header>
+    <br>
     <form action="guardar_modif_prov.php" method="POST">
         <input type="hidden" name="id" value="<?php echo $id; ?>">
-        <label for="nuevoNumDoc">Nuevo Num. de Documento:</label>
+        <label class="nuevo" for="nuevoNumDoc">Nuevo Num. de Documento:</label>
         <input type="text" name="nuevoNumDoc" value="<?php echo $registro['Num_Doc']; ?>"><br>
 
         <label for="nuevoNombreProv">Nuevo Nombre del Proveedor:</label>
         <input type="text" name="nuevoNombreProv" value="<?php echo $registro['Nombre_prov']; ?>"><br>
 
-        <label for="nuevaDireccion">Nueva Dirección:</label>
+        <label class="direc" for="nuevaDireccion">Nueva Dirección:</label>
         <input type="text" name="nuevaDireccion" value="<?php echo $registro['Direccion']; ?>"><br>
 
-        <label for="nuevoCorreo">Nuevo Correo Electrónico:</label>
+        <label class="nuevo" for="nuevoCorreo">Nuevo Correo Electrónico:</label>
         <input type="text" name="nuevoCorreo" value="<?php echo $registro['correo']; ?>"><br>
 
-        <label for="nuevoCelular">Nuevo Número de Celular:</label>
+        <label class="nuevo" for="nuevoCelular">Nuevo Número de Celular:</label>
         <input type="text" name="nuevoCelular" value="<?php echo $registro['celular']; ?>"><br>
 
-        <label for="nuevoProducto">Nuevo Producto:</label>
-        <input type="text" name="nuevoProducto" value="<?php echo $registro['producto']; ?>"><br>
+        <label class="produc" for="nuevoProducto">Nuevo Producto:</label>
+        <input type="text" name="nuevoProducto" value="<?php echo $registro['producto']; ?>"><br><br>
 
         <button type="submit" name="actualizar">Actualizar</button>
     </form>
+    <br><br>
 </body>
 </html>

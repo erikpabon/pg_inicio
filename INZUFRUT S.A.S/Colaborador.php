@@ -247,8 +247,6 @@
         
         <label class="tovar" for="tipo_persona">Tipo de Persona:</label>
         <select id="tipo_persona" name="tipo_persona" required>
-            <option value="gerente">Gerente</option>
-            <option value="colaborador">Colaborador</option>
             <option value="proveedor">Proveedor</option>
         </select><br>
         
