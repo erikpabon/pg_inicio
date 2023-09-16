@@ -25,11 +25,11 @@ if ($result->num_rows == 1) {
 
     // Redirigir según el rol
     if ($tipo_persona == 'gerente') {
-        header("Location: home.php");
+        header("Location: gerente/home.php");
     } elseif ($tipo_persona == 'colaborador') {
-        header("Location: colaborador.php");
+        header("Location: colaborador/colaborador.php");
     } elseif ($tipo_persona == 'proveedor') {
-        header("Location: providers.php");
+        header("Location: proveedor/providers.php");
     } else {
         echo "Rol no válido.";
     }
