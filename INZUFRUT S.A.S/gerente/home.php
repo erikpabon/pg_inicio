@@ -122,7 +122,7 @@
 						</a>
 						<ul class="full-width menu-principal sub-menu-options">
 							<li class="full-width">
-								<a href="Colaborador.php" class="full-width">
+								<a href="../colaborador/Colaborador.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-balance"></i>
 									</div>
@@ -132,7 +132,7 @@
 								</a>
 							</li>
 							<li class="full-width">
-								<a href="providers.php" class="full-width">
+								<a href="../proveedor/providers.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-truck"></i>
 									</div>
@@ -161,7 +161,7 @@
 					
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="inventory.php" class="full-width">
+						<a href="../inventory.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-store"></i>
 							</div>
@@ -221,7 +221,7 @@
             // Realiza una petición al servidor para cerrar la sesión (puedes usar AJAX o redireccionar)
             // En PHP, puedes usar session_destroy() para eliminar la sesión del servidor.
             // Después, redirige al usuario a index.php.
-            window.location.href = 'index.php';
+            window.location.href = '../index.php';
         }
 
         // Agrega un evento de clic al botón de "Cerrar Sesión"

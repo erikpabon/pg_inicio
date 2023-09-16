@@ -91,7 +91,7 @@
 		<div class="full-width navLateral-bg btn-menu"></div>
 		<div class="full-width navLateral-body">
 			<div class="full-width navLateral-body-logo text-center tittles">
-				<i class="zmdi zmdi-close btn-menu"></i> Inventory 
+				<i class="zmdi zmdi-close btn-menu"></i> INZUFRUT 
 			</div>
 			<figure class="full-width navLateral-body-tittle-menu">
 				<div>
@@ -99,24 +99,13 @@
 				</div>
 				<figcaption>
 					<span>
-						LIBARDO MALAVER PARRA<br>
-						<small>GERENTE</small>
+						Libardo Malaver<br>
+						<small>COLABORADOR</small>
 					</span>
 				</figcaption>
 			</figure>
 			<nav class="full-width">
 				<ul class="full-width list-unstyle menu-principal">					
-					<li class="full-width divider-menu-h"></li>
-					<li class="full-width">
-						<a href="home.php" class="full-width">
-							<div class="navLateral-body-cl">
-								<i class="zmdi zmdi-label"></i>
-							</div>
-							<div class="navLateral-body-cr">
-								INICIO
-							</div>
-						</a>
-					</li>
 			<nav class="full-width">
 				<ul class="full-width list-unstyle menu-principal">					
 					<li class="full-width divider-menu-h"></li>
@@ -132,7 +121,7 @@
 					</li>
 					<li class="full-width divider-menu-h"></li>										
 					<li class="full-width">
-						<a href="products.php" class="full-width">
+						<a href="../proveedor/tabla_proveedores.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-washing-machine"></i>
 							</div>
@@ -143,7 +132,7 @@
 					</li>					
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="inventory.php" class="full-width">
+						<a href="../inventory.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-store"></i>
 							</div>
