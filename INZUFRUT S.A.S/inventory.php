@@ -249,7 +249,7 @@
 			.stcuad {
 				border-radius: 12px;
 				width: 200px;
-				height: 20px;
+				height: 30px;
 				border-color: #f9c063;
 				border-style: solid;
 			}
@@ -277,7 +277,7 @@
 
 
 			<label for="cantidad">Cantidad:</label>
-			<input class="stcuad" type="number" id="cantidad" placeholder="Eje 80 uds" name="cantidad"><br><br>
+			<input class="stcuad" type="numero" id="cantidad" placeholder="Eje 80 uds" name="cantidad"><br><br>
 
 			<label for="precio">Precio ud:</label>
 			<input class="stcuadro" type="text" id="precio" placeholder="Eje 3.000" name="precio" style="width: auto;"><br><br>

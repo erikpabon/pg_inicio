@@ -192,6 +192,18 @@
 							<i class="zmdi zmdi-power"></i>
 							<div class="mdl-tooltip" for="btn-exit">Cerrar Sesion</div>
 						</li>
+						<script>
+        // Función para cerrar la sesión y redirigir a index.php
+        function cerrarSesion() {
+            // Realiza una petición al servidor para cerrar la sesión (puedes usar AJAX o redireccionar)
+            // En PHP, puedes usar session_destroy() para eliminar la sesión del servidor.
+            // Después, redirige al usuario a index.php.
+            window.location.href = 'index.php';
+        }
+
+        // Agrega un evento de clic al botón de "Cerrar Sesión"
+        document.getElementById('btn-exit').addEventListener('click', cerrarSesion);
+    </script>
 						<li class="text-condensedLight noLink"><small>Nombre de usuario</small></li>
 						<li class="noLink">
 							<figure>
