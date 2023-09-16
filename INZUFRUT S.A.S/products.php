@@ -102,19 +102,13 @@
 			</div>
 			<figure class="full-width navLateral-body-tittle-menu">
 				<div>
-					<img src="assets/img/avatar-male.png" alt="Avatar" class="img-responsive">
+					<img src="https://cdn-icons-png.flaticon.com/512/1514/1514469.png" alt="Avatar" class="img-responsive">
 				</div>
-				<figcaption>
-					<span>
-						Erik Pabon<br>
-						<small>Admin</small>
-					</span>
-				</figcaption>
 			</figure>
 			<nav class="full-width">
 				<ul class="full-width list-unstyle menu-principal">
 					<li class="full-width">
-						<a href="home.php" class="full-width">
+						<a href="inventory.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-view-dashboard"></i>
 							</div>

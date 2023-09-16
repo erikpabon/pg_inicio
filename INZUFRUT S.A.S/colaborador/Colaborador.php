@@ -95,7 +95,7 @@
 			</div>
 			<figure class="full-width navLateral-body-tittle-menu">
 				<div>
-					<img src="assets/img/avatar-male.png" alt="Avatar" class="img-responsive">
+					<img src="https://cdn-icons-png.flaticon.com/512/1803/1803615.png" alt="Avatar" class="img-responsive">
 				</div>
 				<figcaption>
 					<span>
@@ -194,12 +194,24 @@
 						</li>
 						<li class="btn-exit" id="btn-exit">
 							<i class="zmdi zmdi-power"></i>
-							<div class="mdl-tooltip" for="btn-exit">LogOut</div>
+							<div class="mdl-tooltip" for="btn-exit">Cerrar Sesion</div>
 						</li>
-						<li class="text-condensedLight noLink" ><small>User Name</small></li>
+						<script>
+        // Función para cerrar la sesión y redirigir a index.php
+        function cerrarSesion() {
+            // Realiza una petición al servidor para cerrar la sesión (puedes usar AJAX o redireccionar)
+            // En PHP, puedes usar session_destroy() para eliminar la sesión del servidor.
+            // Después, redirige al usuario a index.php.
+            window.location.href = '../index.php';
+        }
+
+        // Agrega un evento de clic al botón de "Cerrar Sesión"
+        document.getElementById('btn-exit').addEventListener('click', cerrarSesion);
+    </script>
+						<li class="text-condensedLight noLink" ><small>Malaver</small></li>
 						<li class="noLink">
 							<figure>
-								<img src="assets/img/avatar-male.png" alt="Avatar" class="img-responsive">
+								<img src="https://cdn-icons-png.flaticon.com/512/1803/1803615.png" alt="Avatar" class="img-responsive">
 							</figure>
 						</li>
 					</ul>

@@ -98,7 +98,7 @@
 		<div class="full-width navLateral-bg btn-menu"></div>
 		<div class="full-width navLateral-body">
 			<div class="full-width navLateral-body-logo text-center tittles">
-				<i class="zmdi zmdi-close btn-menu"></i> Inventario
+				<i class="zmdi zmdi-close btn-menu"></i> INZUFRUT
 			</div>
 			<figure class="full-width navLateral-body-tittle-menu">
 				<div>
@@ -106,8 +106,8 @@
 				</div>
 				<figcaption>
 					<span>
-						Nombre del proveedor<br>
-						<small>proveedor</small>
+						Julian Tinoco<br>
+						<small>PROVEEDOR</small>
 					</span>
 				</figcaption>
 			</figure>
@@ -115,7 +115,7 @@
 				<ul class="full-width list-unstyle menu-principal">
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="products.php" class="full-width">
+						<a href="../products.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-washing-machine"></i>
 							</div>
@@ -137,7 +137,7 @@
 					</li>
 					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
-						<a href="inventory.php" class="full-width">
+						<a href="../products.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-store"></i>
 							</div>

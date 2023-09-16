@@ -116,7 +116,7 @@
 								<i class="zmdi zmdi-case"></i>
 							</div>
 							<div class="navLateral-body-cr">
-								COLABORADOR
+								PERSONAL
 							</div>
 							<span class="zmdi zmdi-chevron-left"></span>
 						</a>
@@ -142,15 +142,23 @@
 								</a>
 							</li>
 							<li class="full-width">
-								
-							</li>
-							<li class="full-width">
 								<a href="registro_gerencia.php" class="full-width">
 									<div class="navLateral-body-cl">
 										<i class="zmdi zmdi-label"></i>
 									</div>
 									<div class="navLateral-body-cr">
-										 REGISTRO
+										 REGISTRO DE PERSONAL
+									</div>
+								</a>
+							</li>
+							</li>
+							<li class="full-width">
+								<a href="tabla_registro.php" class="full-width">
+									<div class="navLateral-body-cl">
+										<i class="zmdi zmdi-label"></i>
+									</div>
+									<div class="navLateral-body-cr">
+										TABLA DE REGISTRO
 									</div>
 								</a>
 							</li>
@@ -231,7 +239,7 @@
 						<li class="text-condensedLight noLink" ><small>Erik Pabon</small></li>
 						<li class="noLink">
 							<figure>
-								<img src="assets/img/erikpabon1.jpg" alt="Avatar" class="img-responsive">
+								<img src="../assets/img/icono.png" alt="Avatar" class="img-responsive">
 							</figure>
 						</li>
 					</ul>

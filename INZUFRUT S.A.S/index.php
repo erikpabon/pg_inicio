@@ -18,8 +18,26 @@
 	<script src="js/sweetalert2.min.js" ></script>
 	<script src="js/jquery.mCustomScrollbar.concat.min.js" ></script>
 	<script src="js/main.js" ></script>
+	<style>
+	.logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+ .logo a {
+  color: #fff;
+}
+ .logo img {
+  max-height: 40px;
+}
+
+	</style>
 </head>
-<body>
+<body><h1 class="logo"><a href="../inicio_pag.php"><img src="https://cdn-icons-png.flaticon.com/128/10010/10010114.png" alt="icon"></a></h1>
 	<div class="login-wrap cover">
 		<div class="container-login">
 			<p class="text-center" style="font-size: 80px;">
@@ -37,7 +55,6 @@
 				</div>
 				<button class="mdl-button mdl-js-button mdl-js-ripple-effect" style="color:  #ff9b04; margin: 0 auto; display: block;">
 					INGRESAR
-
 				</button>
 			</form>
 		</div>
