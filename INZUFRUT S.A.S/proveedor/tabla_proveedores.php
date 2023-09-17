@@ -2,7 +2,7 @@
 <html>
 <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="assets/img/icono.png" rel="icon">
+    <link href="assets/img/icono.png" rel="icon">    
     <title>TABLA DE PROVEEDORES</title>
     <?php
         include 'conexion.php';
@@ -85,7 +85,7 @@
     </style>
 </head>
 <body>
-<main class="Lista">
+<main class="Lista" style="height: 100%; overflow: auto;">
     <h2><img class="pabon" src="assets/img/icono.png" alt="icon"></a>Datos Registrados</h2><br>
     <form class="busqueda" method="post">
         <label for="terminoBusqueda">Término de Búsqueda:</label>
@@ -136,14 +136,17 @@
     <br>
     <br>
     <a class="bt" href="providers.php">Regresar</a>
+    <br>
+    <br>
 </main>
-<div id="resultadoBusqueda" style="display: none;"></div>
+<!-- <div id="resultadoBusqueda" style="display: none;"></div> -->
 <script>
+    
 $(document).ready(function () {
-    $("#terminoBusqueda").on("input", function () {
+    $("#terminoBusqueda").on("keyup", function () {
         var termino = $(this).val();
 
-        if (termino.length >= 3) {
+        if (termino.length >= 1) {
             // Realiza una solicitud AJAX para buscar coincidencias
             $.ajax({
                 url: "buscar_prov.php", // Ruta del archivo PHP de búsqueda
@@ -151,18 +154,17 @@ $(document).ready(function () {
                 data: { terminoBusqueda: termino },
                 success: function (data) {
                     // Oculta la tabla de proveedores y muestra los resultados de la búsqueda
-                    $("#tablaProveedores").hide();
-                    $("#resultadoBusqueda").html(data).show();
+                    $("#resultadoBusqueda").hide();
+                    $("#tablaDatos").html(data).show();
                 }
             });
         } else {
             // Muestra la tabla de proveedores y oculta los resultados si el término es demasiado corto
-            $("#tablaProveedores").show();
-            $("#resultadoBusqueda").html("").hide();
+            $("#resultadoBusqueda").hide();
+            $("#tablaDatos").show();
         }
     });
 });
-
 </script>
 </body>
 </html>
