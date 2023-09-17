@@ -189,7 +189,7 @@
 			</header>
 
 			<main class="Agregar">
-				<form onsubmit="agregarProducto(); return false;">
+				<form action="crear_producto.php" method="POST">
 					<label for="nombre">Nombre del Producto:</label>
 					<input type="text" id="nombre" name="nombre" required class="addProduct"><br><br>
 
