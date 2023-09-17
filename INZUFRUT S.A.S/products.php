@@ -108,13 +108,25 @@
 			</figure>
 			<nav class="full-width">
 				<ul class="full-width list-unstyle menu-principal">
+					<li class="full-width divider-menu-h"></li>
 					<li class="full-width">
 						<a href="inventory.php" class="full-width">
 							<div class="navLateral-body-cl">
-								<i class="zmdi zmdi-view-dashboard"></i>
+								<i class="zmdi zmdi-washing-machine"></i>
 							</div>
 							<div class="navLateral-body-cr">
-								Inicio
+							     INICIO
+							</div>
+						</a>
+					</li>
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<a href="tabla_producto.php" class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-shopping-cart"></i>
+							</div>
+							<div class="navLateral-body-cr">
+								REGISTROS DE PRODUCTOS
 							</div>
 						</a>
 					</li>
@@ -189,15 +201,15 @@
 			</header>
 
 			<main class="Agregar">
-				<form action="crear_producto.php" method="POST">
+				<form action="valid_producto.php" method="POST">
 					<label for="nombre">Nombre del Producto:</label>
 					<input type="text" id="nombre" name="nombre" required class="addProduct"><br><br>
 
 
-					<label for="cantidad">Precio:</label>
+					<label for="cantidad">cantidad:</label>
 					<input type="number" id="cantidad" name="cantidad" min="1" required class="addProduct"><br><br>
 
-					<label for="estado">Proveedor:</label>
+					<label for="estado">Estado:</label>
 					<select id="estado" name="estado" required class="addProduct">
 						<option value="fresco">Fresco</option>
 						<option value="maduro">Maduro</option>
@@ -212,45 +224,6 @@
 				</form>
 
 			</main>
-
-			<main class="Lista">
-				<h2>Lista de Productos Registrados</h2>
-				<table id="tabla-productos">
-					<tr>
-						<th class="name">Nombre</th>
-						<th>Estado</th>
-						<th>Descripción</th>
-						<th class="quantity">Cantidad</th>
-					</tr>
-				</table>
-			</main>
-
-			<script>
-				function agregarProducto() {
-					var nombre = document.getElementById("nombre").value;
-					var estado = document.getElementById("estado").value;
-					var descripcion = document.getElementById("descripcion").value;
-					var cantidad = document.getElementById("cantidad").value;
-
-					var tablaProductos = document.getElementById("tabla-productos");
-					var fila = tablaProductos.insertRow(-1);
-					var celdaNombre = fila.insertCell(0);
-					var celdaEstado = fila.insertCell(1);
-					var celdaDescripcion = fila.insertCell(2);
-					var celdaCantidad = fila.insertCell(3);
-
-					celdaNombre.innerHTML = nombre;
-					celdaEstado.innerHTML = estado;
-					celdaDescripcion.innerHTML = descripcion;
-					celdaCantidad.innerHTML = cantidad;
-
-					// Limpiar campos del formulario
-					document.getElementById("nombre").value = "";
-					document.getElementById("estado").value = "fresco";
-					document.getElementById("descripcion").value = "";
-					document.getElementById("cantidad").value = "";
-				}
-			</script>
 		</section>
 </body>
 
