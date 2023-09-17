@@ -104,12 +104,12 @@
 				<div>
 					<img src="assets/img/avatar-male.png" alt="Avatar" class="img-responsive">
 				</div>
-				<figcaption>
+				<!-- <figcaption>
 					<span>
-						Julian Tinoco<br>
-						<small>PROVEEDOR</small>
-					</span>
-				</figcaption>
+						<?php echo $_SESSION['nombre']; ?><br>
+						<small>Administrador</small>
+					</span>					
+				</figcaption> -->
 			</figure>
 			<nav class="full-width">
 				<ul class="full-width list-unstyle menu-principal">

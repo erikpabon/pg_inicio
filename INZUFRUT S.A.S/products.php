@@ -17,7 +17,9 @@
 	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
 	<link rel="stylesheet" href="css/main.css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+	<script>
+		window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')
+	</script>
 	<script src="js/material.min.js"></script>
 	<script src="js/sweetalert2.min.js"></script>
 	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -29,8 +31,7 @@
 	<section class="full-width container-notifications">
 		<div class="full-width container-notifications-bg btn-Notification"></div>
 		<section class="NotificationArea">
-			<div class="full-width text-center NotificationArea-title tittles">Notificaciones <i
-					class="zmdi zmdi-close btn-Notification"></i></div>
+			<div class="full-width text-center NotificationArea-title tittles">Notificaciones <i class="zmdi zmdi-close btn-Notification"></i></div>
 			<a href="#" class="Notification" id="notifation-unread-1">
 				<div class="Notification-icon"><i class="zmdi zmdi-accounts-alt bg-info"></i></div>
 				<div class="Notification-text">
@@ -161,7 +162,7 @@
 		<div class="full-width navBar">
 			<div class="full-width navBar-options">
 				<i class="zmdi zmdi-swap btn-menu" id="btn-menu"></i>
-				<div class="mdl-tooltip" for="btn-menu">Hide / Show MENU</div>
+				<div class="mdl-tooltip" for="btn-menu">Ocultar Menu/ Mostrar Menu</div>
 				<nav class="navBar-options-list">
 					<ul class="list-unstyle">
 						<li class="btn-Notification" id="notifications">
@@ -170,7 +171,7 @@
 						</li>
 						<li class="btn-exit" id="btn-exit">
 							<i class="zmdi zmdi-power"></i>
-							<div class="mdl-tooltip" for="btn-exit">LogOut</div>
+							<div class="mdl-tooltip" for="btn-exit">Cerrar Sesión</div>
 						</li>
 						<li class="text-condensedLight noLink"><small>nombre de usuario</small></li>
 						<li class="noLink">
@@ -192,11 +193,11 @@
 					<label for="nombre">Nombre del Producto:</label>
 					<input type="text" id="nombre" name="nombre" required class="addProduct"><br><br>
 
-					
-					<label for="cantidad">Cantidad:</label>
+
+					<label for="cantidad">Precio:</label>
 					<input type="number" id="cantidad" name="cantidad" min="1" required class="addProduct"><br><br>
 
-					<label for="estado">Estado de la Fruta:</label>
+					<label for="estado">Proveedor:</label>
 					<select id="estado" name="estado" required class="addProduct">
 						<option value="fresco">Fresco</option>
 						<option value="maduro">Maduro</option>
@@ -209,18 +210,19 @@
 
 					<button type="submit" class="addProduct">Registrar Producto</button>
 				</form>
+
 			</main>
 
 			<main class="Lista">
 				<h2>Lista de Productos Registrados</h2>
-    <table id="tabla-productos">
-        <tr>
-            <th class="name">Nombre</th>
-            <th>Estado</th>
-            <th>Descripción</th>
-            <th class="quantity">Cantidad</th>
-        </tr>
-    </table>
+				<table id="tabla-productos">
+					<tr>
+						<th class="name">Nombre</th>
+						<th>Estado</th>
+						<th>Descripción</th>
+						<th class="quantity">Cantidad</th>
+					</tr>
+				</table>
 			</main>
 
 			<script>
@@ -229,19 +231,19 @@
 					var estado = document.getElementById("estado").value;
 					var descripcion = document.getElementById("descripcion").value;
 					var cantidad = document.getElementById("cantidad").value;
-					
+
 					var tablaProductos = document.getElementById("tabla-productos");
 					var fila = tablaProductos.insertRow(-1);
 					var celdaNombre = fila.insertCell(0);
 					var celdaEstado = fila.insertCell(1);
 					var celdaDescripcion = fila.insertCell(2);
 					var celdaCantidad = fila.insertCell(3);
-					
+
 					celdaNombre.innerHTML = nombre;
 					celdaEstado.innerHTML = estado;
 					celdaDescripcion.innerHTML = descripcion;
 					celdaCantidad.innerHTML = cantidad;
-					
+
 					// Limpiar campos del formulario
 					document.getElementById("nombre").value = "";
 					document.getElementById("estado").value = "fresco";
