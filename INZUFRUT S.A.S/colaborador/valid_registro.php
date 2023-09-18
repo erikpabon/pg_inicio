@@ -1,6 +1,6 @@
 <?php
 
-include 'conexion.php';
+include ('../conexion.php');
 
 $numer = $_POST ['numero_documento'];
 $tip_iden = $_POST ['tipo_iden'];

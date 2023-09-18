@@ -227,8 +227,8 @@
         <form action="valid_registro.php" method="POST">
 		<label class="tovar" for="tipo_identificacion">Tipo de Identificación:</label>
 			<select id="tipo_iden" name="tipo_iden" required>
-			<option value="cedula_ciudadania">Cédula de Ciudadanía</option>
-			<option value="cedula_extranjera">Cédula Extranjera</option>
+			<option value="cedula de ciudadania">Cédula de Ciudadanía</option>
+			<option value="cedula de extranjera">Cédula Extranjera</option>
         </select><br>
         
         <label for="numero_documento">Número de Documento:</label>

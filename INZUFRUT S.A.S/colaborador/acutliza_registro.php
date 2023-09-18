@@ -1,5 +1,5 @@
 <?php
-include 'conexion.php';
+include ('../conexion.php');
 
 // Verificar si se ha enviado el ID del registro a actualizar
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])) {
