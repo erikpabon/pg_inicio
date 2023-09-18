@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
-    <title>Tabla de Registro</title>
+<link href="assets/img/icono.png" rel="icon">
+	<title>INZUFRUT</title>
     <?php
 include 'conexion.php';
 
@@ -111,9 +111,9 @@ while($ejec = mysqli_fetch_array($result)){
 <td><?php echo $ejec ['primNombre']?></td>
 <td><?php echo $ejec ['segNombre']?></td>
 <td><?php echo $ejec ['primApellido']?></td>
-<td><?php echo $ejec ['segApellido']?></td>
-<td><?php echo $ejec ['Correo']?></td>  
+<td><?php echo $ejec ['segApellido']?></td>  
 <td><?php echo $ejec ['Tipo_persona']?></td> 
+<td><?php echo $ejec ['Correo']?></td> 
 <td>
         <form action="eliminar_registro.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $ejec['Num_Doc']; ?>">
@@ -137,6 +137,9 @@ while($ejec = mysqli_fetch_array($result)){
 <br>
 
 <a class="bt" href="registro_gerencia.php">Regresar</a>
+<form  method="post" action="excel_gerente.php">
+        <button class="bt" type="submit" name="exportar_excel">Exportar</button>
+    </form>
 </body>
 </html>
 

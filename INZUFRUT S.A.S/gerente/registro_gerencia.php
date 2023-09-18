@@ -32,6 +32,13 @@
 	border-color: #f9c063;
 	border-style: solid;	
 }
+.contra{
+  border-radius: 12px;
+	width: 500px;
+	height: 20px;
+	border-color: #f9c063;
+	border-style: solid;
+}
 .stcuadr{
 	border-radius: 12px;
 	height: 10px;
@@ -104,6 +111,12 @@ h2{
 	background-color: rgb(251, 213, 155);
     color: black;
     text-decoration:solid;
+  }select{
+    border-radius: 12px;
+	width: 200px;
+	height: 30px;
+	border-color: #f9c063;
+	border-style: solid;
   }
     </style>
 </head>
@@ -121,36 +134,39 @@ h2{
 			<option value="cedula_extranjera">Cédula Extranjera</option>
         </select><br>
         
-        <label for="numero_documento">Número de Documento:</label>
+        <label for="numero_documento">Número de Documento:</label><br>
         <input class="stcuadro" type="number" id="numero_documento" name="numero_documento" required><br>
         
-        <label for="primer_nombre">Primer Nombre:</label>
+        <label for="primer_nombre">Primer Nombre:</label><br>
         <input class="stcuadro" type="text" id="primer_nombre" name="primer_nombre" required><br>
         
-        <label for="segundo_nombre">Segundo Nombre:</label>
+        <label for="segundo_nombre">Segundo Nombre:</label><br>
         <input class="stcuadro" type="text" id="segundo_nombre" name="segundo_nombre"><br>
         
-        <label for="primer_apellido">Primer Apellido:</label>
+        <label for="primer_apellido">Primer Apellido:</label><br>
         <input class="stcuadro" type="text" id="primer_apellido" name="primer_apellido" required><br>
         
-        <label for="segundo_apellido">Segundo Apellido:</label>
+        <label for="segundo_apellido">Segundo Apellido:</label><br>
         <input class="stcuadro" type="text" id="segundo_apellido" name="segundo_apellido"><br>
         
         <label class="tovar" for="tipo_persona">Tipo de Persona:</label>
         <select id="tipo_persona" name="tipo_persona" required>
             <option value="gerente">Gerente</option>
             <option value="colaborador">Colaborador</option>
-        </select><br>
+        </select><br><br>
         
-        <label for="correo_electronico">Correo Electrónico:</label>
+        <label for="correo_electronico">Correo Electrónico:</label><br>
         <input class="stcuadro" type="email" id="correo_electronico" name="correo_electronico" required><br>
+
+        <label for="contrasena">Contraseña:</label>
+        <input class="contra" type="password"id="contrasena" name="contrasena" required><br><br>
 
         <input class="topar" type="submit" value="Registrar">
         <a class="bt" href="home.php">Regresar</a>
     </form>
     
 </main>
-<a href="home.php">Regresar</a>
+
     
 	</section>
 </body>

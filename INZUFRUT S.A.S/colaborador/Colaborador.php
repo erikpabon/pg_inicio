@@ -121,7 +121,7 @@
 					</li>
 					<li class="full-width divider-menu-h"></li>										
 					<li class="full-width">
-						<a href="../proveedor/tabla_proveedores.php" class="full-width">
+						<a href="tabla_registro.php" class="full-width">
 							<div class="navLateral-body-cl">
 								<i class="zmdi zmdi-washing-machine"></i>
 							</div>
@@ -218,7 +218,24 @@
 				</nav>
 			</div>
 		</div>
+
 		<section class="body">
+			<style>
+				.contra{
+  border-radius: 12px;
+	width: 500px;
+	height: 20px;
+	border-color: #f9c063;
+	border-style: solid;
+}
+		select{
+    border-radius: 12px;
+	width: 200px;
+	height: 30px;
+	border-color: #f9c063;
+	border-style: solid;
+  }
+			</style>
 			<header>
 		<h1><img class="pabon" src="assets/img/icono.png" alt="icon"></a>Formulario de Registro</h1>
 		</header>
@@ -232,27 +249,30 @@
         </select><br>
         
         <label for="numero_documento">Número de Documento:</label>
-        <input class="stcuadro" type="number" id="numero_documento" name="numero_documento" required><br>
+        <input class="stcuadro" type="number" id="numero_documento" name="numero_documento" required><br><br>
         
         <label for="primer_nombre">Primer Nombre:</label>
-        <input class="stcuadro" type="text" id="primer_nombre" name="primer_nombre" required><br>
+        <input class="stcuadro" type="text" id="primer_nombre" name="primer_nombre" required><br><br>
         
         <label for="segundo_nombre">Segundo Nombre:</label>
-        <input class="stcuadro" type="text" id="segundo_nombre" name="segundo_nombre"><br>
+        <input class="stcuadro" type="text" id="segundo_nombre" name="segundo_nombre"><br><br>
         
         <label for="primer_apellido">Primer Apellido:</label>
-        <input class="stcuadro" type="text" id="primer_apellido" name="primer_apellido" required><br>
+        <input class="stcuadro" type="text" id="primer_apellido" name="primer_apellido" required><br><br>
         
         <label for="segundo_apellido">Segundo Apellido:</label>
-        <input class="stcuadro" type="text" id="segundo_apellido" name="segundo_apellido"><br>
+        <input class="stcuadro" type="text" id="segundo_apellido" name="segundo_apellido"><br><br>
         
         <label class="tovar" for="tipo_persona">Tipo de Persona:</label>
         <select id="tipo_persona" name="tipo_persona" required>
             <option value="proveedor">Proveedor</option>
-        </select><br>
+        </select><br><br>
         
         <label for="correo_electronico">Correo Electrónico:</label>
-        <input class="stcuadro" type="email" id="correo_electronico" name="correo_electronico" required><br>
+        <input class="stcuadro" type="email" id="correo_electronico" name="correo_electronico" required><br><br>
+
+		<label for="contrasena">Contraseña:</label>
+        <input class="contra" type="password"id="contrasena" name="contrasena" required><br><br>
 
         <input class="topar" type="submit" value="Registrar">
     </form>

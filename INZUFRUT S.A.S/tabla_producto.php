@@ -82,9 +82,6 @@ include 'conexion.php';
             border-color: #f9c063;
             border-style: solid;
         }
-        .esportar{
-   
-        }
     </style>
 </head>
 <body>
@@ -135,7 +132,7 @@ include 'conexion.php';
     <br>
     <br>
     <a class="bt" href="products.php">Regresar</a>
-    <form class="exportar" method="post" action="exportar_excel.php">
+    <form method="post" action="exportar_excel.php">
         <button class="bt" type="submit" name="exportar_excel">Exportar</button>
     </form>
 </main>

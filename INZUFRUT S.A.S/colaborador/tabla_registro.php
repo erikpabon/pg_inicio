@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
-    <title>Tabla de Registro</title>
+<link href="assets/img/icono.png" rel="icon">
+	<title>INZUFRUT</title>
     <?php
     include('../conexion.php');
 
@@ -147,8 +147,11 @@
         <br>
         <br>
 
-        <a class="bt" href="registro_gerencia.php">Regresar</a>
+        <a class="bt" href="colaborador.php">Regresar</a>
         <br><br>
+        <form  method="post" action="excel_colaborador.php">
+        <button class="bt" type="submit" name="exportar_excel">Exportar</button>
+    </form>
     </main>
     <script>
         $(document).ready(function() {
