@@ -17,14 +17,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['actualizar'])) {
     
     // Realiza la actualización en la base de datos
     $query = "UPDATE persona SET 
-              tipo_identificacion = '$nuevoTipoIdentificacion',
+              Tipo_identificacion = '$nuevoTipoIdentificacion',
               Num_Doc = '$nuevoNumeroDocumento',
               primNombre = '$nuevoPrimerNombre',
               segNombre = '$nuevoSegundoNombre',
               primApellido = '$nuevoPrimerApellido',
               segApellido = '$nuevoSegundoApellido',
-              tipo_persona = '$nuevoTipoPersona',
-              correo = '$nuevoCorreo',
+              Tipo_persona = '$nuevoTipoPersona',
+              Correo = '$nuevoCorreo',
               contrasena = '$nuevacontra'
               WHERE Num_Doc = '$id'";
     
