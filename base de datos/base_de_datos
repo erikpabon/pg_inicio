@@ -1,0 +1,141 @@
+CREATE DATABASE proyecto_inzuf;
+USE proyecto_inzuf;
+
+CREATE TABLE Cargo
+(
+    id_Cargo int PRIMARY KEY,
+    nomCargo varchar (15)
+);
+CREATE TABLE Persona
+(
+    Num_Doc int  PRIMARY KEY,
+    Tipo_identificacion varchar (50),
+    primNombre varchar (50),
+    segNombre varchar (50),
+    primApellido varchar (50),
+    segApellido varchar (50),
+    Correo varchar (50),
+    contrasena varchar (100),
+    Tipo_persona varchar (50),
+    id_Cargo int,
+    FOREIGN KEY (id_Cargo) REFERENCES Cargo (id_Cargo)
+);
+
+CREATE TABLE Contacto
+(
+    id_contacto int AUTO_INCREMENT PRIMARY KEY,
+    Correo varchar (30),
+    Telefono int,
+    Num_Doc int (12),
+    FOREIGN KEY (Num_Doc) REFERENCES Persona (Num_Doc)
+   
+);
+CREATE TABLE Proveedores
+(
+    id_Proveedor int PRIMARY KEY AUTO_INCREMENT,
+    tipo_identificacion varchar (30),
+    Num_Doc int (12),
+    Nombre_prov varchar (45),
+    Descricion varchar (100),
+    correo varchar (20),
+    celular int (12),
+    producto varchar (50),
+    FOREIGN KEY (Num_Doc) REFERENCES Persona (Num_Doc)
+);
+CREATE TABLE Direccion
+(
+    id_viapcpal int PRIMARY KEY AUTO_INCREMENT,
+    Num_viapcpal int,
+    id_viasec int,
+    Num_viasec int,
+    Num_casa int,
+    id_cuidad int,
+    Num_Doc int (12),
+    FOREIGN KEY (Num_Doc) REFERENCES Persona (Num_Doc)
+);
+CREATE TABLE Tarea
+(
+ id_tarea int PRIMARY KEY AUTO_INCREMENT,
+    Tipo_tarea varchar (45),
+    Nom_tarea varchar (40),
+    Descripcion_tarea varchar (45)      
+);
+CREATE TABLE Empleado
+(
+    id_Empleado int PRIMARY KEY AUTO_INCREMENT,
+    Salario_Empleado int,
+    Num_Doc int,
+    id_tarea int,
+    FOREIGN KEY (Num_Doc) REFERENCES Persona (Num_Doc),
+    FOREIGN KEY (id_tarea) REFERENCES Tarea (id_tarea)
+);
+CREATE TABLE Permisos
+(
+ id_Permiso int PRIMARY KEY AUTO_INCREMENT,
+    Tipo_permiso varchar (15),
+    id_Cargo int,
+    FOREIGN KEY (id_Cargo) REFERENCES Cargo (id_Cargo)
+);
+CREATE TABLE Productos
+(
+    id_producto int PRIMARY KEY AUTO_INCREMENT,
+    Nom_producto varchar (45),
+    Cantidad_produc int,
+    Estado varchar (50),
+    Descrip_producto varchar (50),
+    precio int (50)
+    
+);
+CREATE TABLE Inventario
+(
+    id_Flujoinvent int PRIMARY KEY AUTO_INCREMENT,
+    Tipo_invent varchar (40),
+    Nom_invent varchar (30),
+    Cantidad_invent int,
+    id_Empleado int,
+    id_producto int,
+    FOREIGN KEY (id_Empleado) REFERENCES Empleado (id_Empleado),
+    FOREIGN KEY (id_producto) REFERENCES Productos (id_producto)
+);
+CREATE TABLE Orden_pedido
+(
+    id_orden int PRIMARY KEY AUTO_INCREMENT,
+    id_Empleado int,
+    id_Flujoinvent int,
+    id_Proveedor int,
+    FOREIGN KEY (id_Empleado) REFERENCES Empleado (id_Empleado),
+    FOREIGN KEY (id_Flujoinvent) REFERENCES Inventario (id_Flujoinvent),
+    FOREIGN KEY (id_Proveedor) REFERENCES Proveedores (id_Proveedor)
+);
+CREATE TABLE Alerta
+(
+    id_alerta int PRIMARY KEY AUTO_INCREMENT,
+    Tipo_alerta varchar (45),
+    Nom_alerta varchar (30),
+    Descripcion_alerta varchar (60)
+);
+CREATE TABLE Incidentes
+(
+    id_incidentes int PRIMARY KEY AUTO_INCREMENT,
+    Nom_incidentes varchar (45),
+    solucion_incid varchar (50),
+     tipo_incidente varchar (40),
+    id_Empleado int,
+    id_alerta int,
+    FOREIGN KEY (id_Empleado) REFERENCES Empleado (id_Empleado),
+    FOREIGN KEY (id_alerta) REFERENCES Alerta (id_alerta)
+);
+CREATE TABLE Novedades
+(
+    id_novedad int PRIMARY KEY AUTO_INCREMENT,
+    Nom_novedad varchar (45),
+    Descripcion_novedad varchar (45),
+    id_Flujoinvent int,
+    FOREIGN KEY (id_Flujoinvent) REFERENCES Inventario (id_Flujoinvent)
+);
+CREATE TABLE Tipo_novedad
+(
+Tipo_novedad varchar (40),
+    id_novedad int,
+    FOREIGN KEY (id_novedad) REFERENCES Novedades (id_novedad)
+);
