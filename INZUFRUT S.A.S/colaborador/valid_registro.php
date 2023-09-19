@@ -10,7 +10,7 @@ $prim_apell = $_POST ['primer_apellido'];
 $seg_apell = $_POST ['segundo_apellido'];
 $tip_per = $_POST ['tipo_persona'];
 $correo = $_POST ['correo_electronico'];
-$contra = $_POST ['cntrasena'];
+$contra = $_POST ['contrasena'];
 
 $query = "INSERT INTO persona (Num_Doc, tipo_identificacion, primNombre, segNombre, primApellido, segApellido, correo, contrasena, tipo_persona)
              VALUES ('$numer', '$tip_iden', '$prim_nom', '$seg_nom', '$prim_apell', '$seg_apell', '$correo', '$contra', '$tip_per')";
