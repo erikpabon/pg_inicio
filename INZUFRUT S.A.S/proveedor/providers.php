@@ -198,7 +198,7 @@
             // Realiza una petición al servidor para cerrar la sesión (puedes usar AJAX o redireccionar)
             // En PHP, puedes usar session_destroy() para eliminar la sesión del servidor.
             // Después, redirige al usuario a index.php.
-            window.location.href = 'index.php';
+            window.location.href = '../index.php';
         }
 
         // Agrega un evento de clic al botón de "Cerrar Sesión"

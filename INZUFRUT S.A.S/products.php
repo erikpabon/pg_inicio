@@ -185,6 +185,18 @@
 							<i class="zmdi zmdi-power"></i>
 							<div class="mdl-tooltip" for="btn-exit">Cerrar Sesión</div>
 						</li>
+						<script>
+							// Función para cerrar la sesión y redirigir a index.php
+							function cerrarSesion() {
+								// Realiza una petición al servidor para cerrar la sesión (puedes usar AJAX o redireccionar)
+								// En PHP, puedes usar session_destroy() para eliminar la sesión del servidor.
+								// Después, redirige al usuario a index.php.
+								window.location.href = 'index.php';
+							}
+
+							// Agrega un evento de clic al botón de "Cerrar Sesión"
+							document.getElementById('btn-exit').addEventListener('click', cerrarSesion);
+						</script>
 						<li class="text-condensedLight noLink"><small>nombre de usuario</small></li>
 						<li class="noLink">
 							<figure>
@@ -195,6 +207,90 @@
 				</nav>
 			</div>
 		</div>
+		<style>
+			/* Estilos para el formulario */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 10px;
+	border-color: orange;
+	border-style: solid;
+    background-color: #f9f9f9;
+}
+form input[type="text"], form input[type="email"], form input[type="number"], textarea {
+  border-style: solid;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  border-color: orange;
+  border-radius: 10px;
+}
+/* Estilos para las etiquetas */
+label {
+    font-weight: bold;
+    display: block;
+}
+select{
+	border-style: solid;
+	border-radius: 10px;
+	border-color: orange;
+	width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Estilos para los campos de entrada y el área de texto */
+.addProduct {
+	border-style: solid;
+	border-radius: 10px;
+	border-color: orange;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Estilos para el botón */
+.addProduct[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.addProduct[type="submit"]:hover {
+    background-color: rgb(251, 213, 155);
+    color: black;
+    text-decoration: solid;
+}
+
+/* Alineación del botón */
+.addProduct[type="submit"] {
+    background-color: rgb(254, 252, 251); /* Cambiar el fondo del botón a naranja */
+    color: black;
+    background-color: rgb(254, 252, 251);
+    border-color: rgb(255, 179, 0);
+    padding: 10px 20px;
+    border-radius: 10px;
+	border-style: solid;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+/* Espaciado adicional entre elementos */
+br {
+    clear: both;
+}
+
+		</style>
 		<section class="body">
 			<header>
 				<h1><img class="pabon" src="assets/img/icono.png" alt="icon"></a> REGISTRO DE PRODUCTO</h1>
@@ -210,7 +306,7 @@
 					<input type="number" id="cantidad" name="cantidad" min="1" required class="addProduct"><br><br>
 
 					<label for="estado">Estado:</label>
-					<select id="estado" name="estado" required class="addProduct">
+					<select id="estado" name="estado" required>
 						<option value="fresco">Fresco</option>
 						<option value="maduro">Maduro</option>
 						<option value="podrido">Podrido</option>

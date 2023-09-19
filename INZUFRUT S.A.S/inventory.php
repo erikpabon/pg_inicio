@@ -254,116 +254,100 @@
 		<div class="centrado">
 			<h1><img class="pabon" src="assets/img/icono.png" alt="icon">Inventario</h1>
 		</div>
+		<br><br>
+		<style>
+			/* Estilos para el formulario */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+	border-style: solid;
+	border-color: orange;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Estilos para las etiquetas */
+label {
+    font-weight: bold;
+}
+
+/* Estilos para los campos de entrada */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {
+  border-style: solid;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  border-color: orange;
+  border-radius: 10px;
+}
+
+/* Estilos para el botón */
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(251, 213, 155);
+    color: black;
+    text-decoration: solid;
+}
+
+/* Alineación del botón */
+button[type="submit"] {
+    background-color: rgb(254, 252, 251); /* Cambiar el fondo del botón a naranja */
+    color: black;
+    background-color: rgb(254, 252, 251);
+    border-color: rgb(255, 179, 0);
+    padding: 10px 20px;
+    border-radius: 10px;
+	border-style: solid;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Espaciado adicional entre elementos */
+br {
+    clear: both;
+}
+
+		</style>
+		<section>
+    <form action="valid_inven.php" method="POST">
+        <label for="nom_productos">Nombre del Producto:</label>
+        <input type="text" id="nom_productos" name="nom_productos" required><br><br>
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" required><br><br>
+
+        <label for="lote">Lote:</label>
+        <input type="text" id="lote" name="lote" required><br><br>
+
+        <label for="fecha_ingreso">Fecha de Ingreso:</label>
+        <input type="date" id="fecha_ingreso" name="fecha_ingreso" required><br><br>
+
+        <label for="fecha_salida">Fecha de Salida:</label>
+        <input type="date" id="fecha_salida" name="fecha_salida"><br><br>
+
+        <label for="descripcion">Descripción:</label><br>
+        <textarea id="descripcion" name="descripcion" rows="4" cols="50"></textarea><br><br>
+
+        <button type="submit" name="guardar">Guardar</button>
+    </form>
+		</section>
 
 
-		<div class="agregarinv">
-			<div>
-				<h3>Agregar nuevo producto</h3>
-			</div>
-
-			<div>
-				<!-- <form class="d-flex justify-content-center align-items-center" id="formularioInventario">
-
-					<label for="producto">Producto:</label>
-
-					<input class="stcuadro" type="text" id="producto" placeholder="Naranja" name="producto" style="width: auto;"><br>
-
-
-					<label for="cantidad">Cantidad:</label>
-					<input class="stcuad" type="numero" id="cantidad" placeholder="Eje 80 uds" name="cantidad"><br><br>
-
-					<label for="precio">Precio ud:</label>
-					<input class="stcuadro" type="text" id="precio" placeholder="Eje 3.000" name="precio" style="width: auto;"><br><br>
-
-					<input class="egar" type="submit" value="Agregar">
-					<button class="egar" type="button" onclick="guardarInventario()">Guardar Inventario</button>
-				</form> -->
-				<form class="d-flex justify-content-center align-items-center" id="formularioInventario" action="crear_inventario.php" method="POST">
-					<label for="producto">Producto:</label>
-					<select class="stcuad" name="producto" id="producto" style="width: auto;">
-						<!-- Opciones para seleccionar el producto -->
-						<option value="">uno</option>
-						<option value="">dos</option>
-						<option value="">tres</option>
-					</select>
-					<br><br>
-					<label for="cantidad">Cantidad en stock:</label>
-					<input class="stcuad" type="number" name="cantidad" id="cantidad" style="width: auto;">
-					<br><br>
-					<label for="fecha_entrada">Fecha de entrada:</label>
-					<input class="stcuad" type="date" name="fecha_entrada" id="fecha_entrada" style="width: auto;">					
-					<br><br>
-					<label for="fecha_entrada">Fecha de salida:</label>
-					<input class="stcuad" type="date" name="fecha_entrada" id="fecha_entrada" style="width: auto;">					
-					<br><br>
-					<!-- <input  type="submit" value="Crear inventario"> -->
-					<button class="egar" type="button" onclick="guardarInventario()">Actualizar Inventario</button>
-				</form>
-
-			</div>
-		</div>
-
-		<table class id="tablaInventario">
-			<tr>
-				<th>Producto</th>
-				<th>Cantidad</th>
-				<th>Precio Unitario</th>
-				<th>Total</th>
-				<th>Acciones</th>
-			</tr>
-		</table>
-
-
-		<script>
-			const inventario = [];
-
-			document.getElementById("formularioInventario").addEventListener("submit", function(event) {
-				event.preventDefault();
-
-				const producto = document.getElementById("producto").value;
-				const cantidad = document.getElementById("cantidad").value;
-				const precio = document.getElementById("precio").value;
-				const total = (parseFloat(cantidad) * parseFloat(precio)).toFixed(2);
-
-				const tabla = document.getElementById("tablaInventario");
-				const newRow = tabla.insertRow(tabla.rows.length);
-
-				const cellProducto = newRow.insertCell(0);
-				const cellCantidad = newRow.insertCell(1);
-				const cellPrecio = newRow.insertCell(2);
-				const cellTotal = newRow.insertCell(3);
-				const cellAcciones = newRow.insertCell(4);
-
-				cellProducto.innerHTML = producto;
-				cellCantidad.innerHTML = cantidad;
-				cellPrecio.innerHTML = `$${precio}`;
-				cellTotal.innerHTML = `$${total}`;
-				cellAcciones.innerHTML = '<button onclick="eliminarProducto(this)">Eliminar</button>';
-
-				document.getElementById("producto").value = "";
-				document.getElementById("cantidad").value = "";
-				document.getElementById("precio").value = "";
-
-				// Agregar al inventario
-				inventario.push({
-					producto,
-					cantidad,
-					precio
-				});
-			});
-
-			function eliminarProducto(row) {
-				const rowIndex = row.parentNode.parentNode.rowIndex;
-				document.getElementById("tablaInventario").deleteRow(rowIndex);
-			}
-
-			function guardarInventario() {
-				const inventarioString = JSON.stringify(inventario);
-				// Aquí puedes implementar la lógica para guardar el inventario en algún lugar (p. ej., en una base de datos)
-				console.log("Inventario guardado:", inventarioString);
-				alert("Inventario guardado. Abre la consola para ver los detalles.");
-			}
-		</script>
 </body>
 
 </html>

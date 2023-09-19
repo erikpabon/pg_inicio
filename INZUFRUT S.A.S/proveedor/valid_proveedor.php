@@ -7,7 +7,7 @@ $numer = $_POST ['numero_identificacion'];
 $nom = $_POST ['nombre_proveedor'];
 $direc = $_POST ['direccion'];
 $correo = $_POST ['correo'];
-$celu = $_POST ['telefono'];
+$celu = $_POST ['telefono'];  
 $produc = $_POST ['producto'];
 
 // Comprobar si el valor existe en la tabla persona
