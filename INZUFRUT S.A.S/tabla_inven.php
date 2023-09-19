@@ -116,12 +116,12 @@ include 'conexion.php';
             <td><?php echo $ejec ['descripcion']?></td>
             <td>
             <!-- Agregar el botón de eliminar con funcionalidad -->
-            <form method="post" action="eliminar_producto.php">
-                <input type="hidden" name="producto_id" value="<?php echo $ejec['id_producto']; ?>">
+            <form method="post" action="eliminar_inven.php">
+                <input type="hidden" name="id" value="<?php echo $ejec['Nombre_producto']; ?>">
                 <button class="btbusca" type="submit">Eliminar</button>
             </form>
             <br>
-            <form method="post" action="actualizar_producto.php">
+            <form method="post" action="actualizar_inven.php">
                 <input type="hidden" name="id" value="<?php echo $ejec['Nombre_producto']; ?>">
                 <button class="btbusca" type="submit">Modificar</button>
             </form><br>

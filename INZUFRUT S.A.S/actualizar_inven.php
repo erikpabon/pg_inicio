@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])) {
     $id = $_POST['id'];
     
     // Consulta para obtener los datos del registro actual
-    $query = "SELECT * FROM productos WHERE Nom_producto = '$id'";
+    $query = "SELECT * FROM inventario WHERE Nombre_producto = '$id'";
     $result = mysqli_query($conexion, $query);
     
     if ($result && mysqli_num_rows($result) > 0) {
@@ -25,16 +25,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['actualizar'])) {
     // Recupera los datos actualizados del formulario
     $nuevoNombre = $_POST['nuevoNombre'];
     $nuevaCantidad = $_POST['nuevaCantidad'];
-    $nuevoTipoestado = $_POST['nuevoTipoestado'];
+    $nuevolote = $_POST['nuevolote'];
+    $nuevafecha_ingre = $_POST['nuevafecha_ingre'];
+    $nuevafecha_sali = $_POST['nuevafecha_sali'];
     $nuevaDescripcion = $_POST['nuevaDescripcion'];
     
     // Realiza la actualización en la base de datos
-    $query = "UPDATE productos SET 
-              Nom_producto = '$nuevoNombre',
-              Cantidad_produc = '$nuevaCantidad',
-              Estado = '$nuevoTipoestado',
-              Descrip_producto = '$nuevaDescripcion'
-              WHERE Nom_producto = '$id'";
+    $query = "UPDATE inventario SET 
+              Nombre_producto = '$nuevoNombre',
+              cantidad = '$nuevaCantidad',
+              lote = '$nuevolote',
+              fecha_entrada = '$nuevafecha_ingre',
+              fecha_salida = '$nuevafecha_sali',
+              descripcion = '$nuevaDescripcion',
+              WHERE Nombre_producto = '$id'";
     
     if (mysqli_query($conexion, $user)) {
         echo "<script>
@@ -158,22 +162,27 @@ select{
     <h2><img class="pabon" src="assets/img/icono.png" alt="icon">MODIFICAR PRODUCTO</h2><br>
     </header>
     <br>
-    <form action="guardar_producto.php" method="POST">
+    <form action="guardar_inven.php" method="POST">
         <input type="hidden" name="id" value="<?php echo $id; ?>">
         <label for="nuevoNombre">Nuevo Nombre de Producto:</label>
-        <input type="text" name="nuevoNombre" value="<?php echo $registro['Nom_producto']; ?>"><br><br>
+        <input type="text" name="nuevoNombre" value="<?php echo $registro['Nombre_producto']; ?>"><br><br>
 
         <label for="nuevaCantidad">Nueva cantidad:</label>
-        <input type="number" name="nuevaCantidad" value="<?php echo $registro['Cantidad_produc']; ?>"><br><br>
+        <input type="number" name="nuevaCantidad" value="<?php echo $registro['cantidad']; ?>"><br><br>
 
-        <label for="nuevoTipoestado">Nuevo tipo de estado:</label>
-        <input type="text" name="nuevoTipoestado" value="<?php echo $registro['Estado']; ?>"><br><br>
+        <label for="nuevoTipoestado">Nuevo lote:</label>
+        <input type="text" name="nuevolote" value="<?php echo $registro['lote']; ?>"><br><br>
+
+        <label for="nuevoTipoestado">Nueva Fecha de Ingreso:</label>
+        <input type="text" name="nuevafecha_ingre" value="<?php echo $registro['fecha_entrada']; ?>"><br><br>
+
+        <label for="nuevoTipoestado">Nueva Fecha de Salida:</label>
+        <input type="text" name="nuevafecha_sali" value="<?php echo $registro['fecha_salida']; ?>"><br><br>
 
         <label for="nuevaDescripcion">Nueva Descripción:</label>
-        <input type="text" name="nuevaDescripcion" value="<?php echo $registro['Descrip_producto']; ?>"><br><br>
+        <input type="text" name="nuevaDescripcion" value="<?php echo $registro['descripcion']; ?>"><br><br>
 
         <button class="btbusca" type="submit" name="actualizar">Actualizar</button><br>
     </form><br>
 </body>
 </html>
-
