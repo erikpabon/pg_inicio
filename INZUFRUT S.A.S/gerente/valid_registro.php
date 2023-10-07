@@ -20,7 +20,7 @@ $verifi = mysqli_query($conexion, "SELECT * FROM persona WHERE correo = '$correo
    if(mysqli_num_rows($verifi) > 0){
       echo '<script>
              alert ("Este correo electronico ya se encuentra registrado");
-             window.location = "colaborador.php"    
+             window.location = "registro_gerencia.php"    
       </script>';
 
       exit();
@@ -38,7 +38,7 @@ $verifi = mysqli_query($conexion, "SELECT * FROM persona WHERE correo = '$correo
    else{
       echo '<script>
            alert("Oops algo ha salido mal con el registro");
-           window.location = "colaborador.php";      
+           window.location = "registro_gerencia.php";      
       </script>';
    }
 

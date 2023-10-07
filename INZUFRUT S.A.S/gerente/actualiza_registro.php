@@ -31,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['actualizar'])) {
     $nuevoSegundoApellido = $_POST['nuevoSegundoApellido'];
     $nuevoTipoPersona = $_POST['nuevoTipoPersona'];
     $nuevoCorreo = $_POST['nuevoCorreo'];
+    $nuevaContra = $_POST['nuevaContrasena'];
     
     // Realiza la actualización en la base de datos
     $query = "UPDATE persona SET 
@@ -41,7 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['actualizar'])) {
               primApellido = '$nuevoPrimerApellido',
               segApellido = '$nuevoSegundoApellido',
               tipo_persona = '$nuevoTipoPersona',
-              correo = '$nuevoCorreo'
+              correo = '$nuevoCorreo',
+              contrasena = '$nuevaContra'
               WHERE Num_Doc = '$id'";
     
     if (mysqli_query($conexion, $user)) {
